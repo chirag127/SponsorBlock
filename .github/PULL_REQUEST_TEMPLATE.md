@@ -1,69 +1,80 @@
-# Pull Request Template
+# 🚀 Pull Request: SegmentShield Update
 
-Thank you for contributing to **SponsorBlock-Crowdsourced-Content-Filter-Browser-Extension**!
+**Please link relevant issues using keywords (e.g., `Closes #123`, `Fixes #456`)**
 
-Please take a moment to review this template and provide the necessary information to help us review your contribution efficiently.
+---
 
-## 1. PR Checklist
+## 📝 Summary of Changes
 
-Before submitting your pull request, please ensure you have:
+<!-- Briefly describe the feature or fix implemented in this PR. What problem does it solve? -->
 
-- [ ] Written clear and concise commit messages using [Conventional Commits](https://www.conventionalcommits.org/).
-- [ ] Updated or added relevant unit tests (`tests/unit/`).
-- [ ] Updated or added relevant integration/e2e tests (`tests/e2e/`).
-- [ ] Ran `biome check --apply` and `biome format --write` to ensure code style consistency.
-- [ ] Run `vitest` to ensure all tests pass.
-- [ ] Updated the documentation (`README.md`, or other relevant files) if your changes affect functionality or API.
-- [ ] Checked for any potential security vulnerabilities or adherence to the DevSecOps Protocol.
-- [ ] Ensured the changes align with the project's architectural principles (SOLID, DRY, KISS).
 
-## 2. Description of Changes
+## ✅ Type of Change
 
-Please provide a detailed explanation of your pull request. Include:
+Select all that apply:
 
-- What problem does this PR solve?
-- What was the approach taken?
-- Are there any specific areas you'd like reviewers to focus on?
+- [ ] 🐛 Bug fix (non-breaking change which fixes an issue)
+- [ ] ✨ New feature (non-breaking change which adds functionality)
+- [ ] 🔨 Refactor (code style, refactoring, cleanup, no functional change)
+- [ ] ⚡️ Performance improvement (new feature or refactor that improves performance)
+- [ ] 🚧 Chore (updates to build process, dependencies, or tooling)
+- [ ] 💥 Breaking change (fix or feature that would cause existing behavior to not work as expected)
+- [ ] 📚 Documentation update
 
-```markdown
-[Describe your changes here]
-```
+---
 
-## 3. Related Issue(s)
+## 🏗 Architectural Review & Code Hygiene
 
-Please link any relevant GitHub issues that this PR addresses.
+**Architectural Authority Mandate:** All changes must adhere to strict modern standards (TypeScript Strict Mode, SOLID principles, Feature-Sliced Design if applicable, 12-Factor configuration).
 
-```markdown
-Fixes #<issue-number>
-Closes #<issue-number>
-Related to #<issue-number>
-```
+<details>
+<summary>🤖 **CODE QUALITY CHECKLIST (Self-Assessment)**</summary>
 
-## 4. Type of Change
+### Core Principles
 
-Select the appropriate category for your change:
+- [ ] **DRY Principle:** Have I avoided duplicating significant logic? If necessary, is the shared logic extracted into a utility/service?
+- [ ] **TypeScript Strictness:** Are all new types correctly defined? Are `any` types avoided?
+- [ ] **Error Handling:** Is asynchronous code handling potential failures (network, API)? Are custom exceptions used where appropriate?
+- [ ] **Immutability:** Are state changes managed immutably (especially React/State hooks)?
 
-- [ ] **New Feature** (non-breaking change which adds functionality)
-- [ ] **Bug Fix** (non-breaking change which fixes an issue)
-- [ ] **Documentation Update** (changes to documentation only)
-- [ ] **Refactoring** (code change that neither fixes a bug nor adds a feature)
-- [ ] **Performance Improvement**
-- [ ] **Test Update**
-- [ ] **CI/CD Update**
-- [ ] **Chore** (maintenance, tooling, etc.)
+### Tooling & Standards
 
-## 5. How Has This Been Tested?
+- [ ] **Biome Check:** Does `npx @biomejs/biome check --apply-unsafe` pass cleanly on modified files?
+- [ ] **Linting:** Are all new code paths compliant with the configuration in `.eslintrc.cjs` or Biome rules?
+- [ ] **Configuration:** Are secrets or environment-specific values handled via `.env` or secure configuration managers, not hardcoded?
 
-Describe the tests that you ran to verify your changes. Please also mention how you verified that no console errors are present.
+### Performance & Security
 
-```markdown
-[Describe your testing process here. E.g., "Ran `vitest` which passed all tests. Verified by manually testing X, Y, Z scenarios. No console errors observed in the browser dev tools during testing."]
-```
+- [ ] **Asset Loading:** Are new assets appropriately sized/compressed?
+- [ ] **Security:** Are inputs from users or external APIs properly sanitized before rendering or processing?
 
-## 6. Screenshots / Videos (Optional)
+</details>
 
-If your changes include UI modifications, please include screenshots or short videos to demonstrate the changes.
+---
 
-## 7. Reviewer
+## 🧪 Testing Verification
 
-@mention the primary reviewer(s) if known.
+**Mandate:** All new logic paths *must* be covered by tests. Performance gains must be demonstrated.
+
+<details>
+<summary>🔬 **TESTING EVIDENCE**</summary>
+
+- [ ] **Unit Tests (Vitest):** Have I added/updated unit tests for all new functions/classes? (Coverage increase verified).
+- [ ] **E2E Tests (Playwright):** If this affects user workflow significantly, have I updated/added Playwright scenarios to validate flow?
+- [ ] **Test Command Output:** Does `npm run test:unit` and `npm run test:e2e` execute successfully?
+
+</details>
+
+---
+
+## 🖼️ Visual/Behavioral Evidence (If UI/UX Related)
+
+If this PR modifies the user interface or extension behavior, please include visual proof.
+
+<!-- Attach GIFs, screenshots, or clear descriptive steps to reproduce the visual change. -->
+
+
+## 🧠 Reviewer Notes
+
+What specific areas should the reviewer focus on? (e.g., performance implications in the segment parsing algorithm, potential race conditions in content script injection).
+

@@ -1,80 +1,47 @@
-# 🚀 Pull Request: SegmentShield Update
+# Pull Request: Feature, Fix, or Refactor
 
-**Please link relevant issues using keywords (e.g., `Closes #123`, `Fixes #456`)**
+**Respecting the Apex Authority Mandate: Clarity, Precision, and Zero Defects.**
 
----
-
-## 📝 Summary of Changes
-
-<!-- Briefly describe the feature or fix implemented in this PR. What problem does it solve? -->
-
-
-## ✅ Type of Change
-
-Select all that apply:
-
-- [ ] 🐛 Bug fix (non-breaking change which fixes an issue)
-- [ ] ✨ New feature (non-breaking change which adds functionality)
-- [ ] 🔨 Refactor (code style, refactoring, cleanup, no functional change)
-- [ ] ⚡️ Performance improvement (new feature or refactor that improves performance)
-- [ ] 🚧 Chore (updates to build process, dependencies, or tooling)
-- [ ] 💥 Breaking change (fix or feature that would cause existing behavior to not work as expected)
-- [ ] 📚 Documentation update
+This template enforces the architectural and quality standards established for this project.
 
 ---
 
-## 🏗 Architectural Review & Code Hygiene
+## 🎯 Summary & Goal
 
-**Architectural Authority Mandate:** All changes must adhere to strict modern standards (TypeScript Strict Mode, SOLID principles, Feature-Sliced Design if applicable, 12-Factor configuration).
+**What does this PR accomplish?** (Be precise. Use conventional commit prefix: `feat:`, `fix:`, `refactor:`, `docs:`, `chore:`)
 
-<details>
-<summary>🤖 **CODE QUALITY CHECKLIST (Self-Assessment)**</summary>
+<!-- Describe the core purpose and the problem this change solves or the feature it introduces. -->
 
-### Core Principles
+## 🧠 Architectural Context & Decision Log
 
-- [ ] **DRY Principle:** Have I avoided duplicating significant logic? If necessary, is the shared logic extracted into a utility/service?
-- [ ] **TypeScript Strictness:** Are all new types correctly defined? Are `any` types avoided?
-- [ ] **Error Handling:** Is asynchronous code handling potential failures (network, API)? Are custom exceptions used where appropriate?
-- [ ] **Immutability:** Are state changes managed immutably (especially React/State hooks)?
+Before merging, confirm you adhered to the core principles:
 
-### Tooling & Standards
+*   **SOLID Compliance:** Does this change violate SRP or violate OCP? (If so, justify heavily).
+*   **DRY & KISS:** Is this logic simplified and reusable?
+*   **CQS:** Is this a pure Command OR a pure Query? (Not both).
+*   **Input Sanitization:** Have ALL new inputs been validated/sanitized (OWASP 2025 consideration)?
 
-- [ ] **Biome Check:** Does `npx @biomejs/biome check --apply-unsafe` pass cleanly on modified files?
-- [ ] **Linting:** Are all new code paths compliant with the configuration in `.eslintrc.cjs` or Biome rules?
-- [ ] **Configuration:** Are secrets or environment-specific values handled via `.env` or secure configuration managers, not hardcoded?
+<!-- Detail any non-obvious architectural choices made or necessary trade-offs. -->
 
-### Performance & Security
+## ✅ Verification & Testing
 
-- [ ] **Asset Loading:** Are new assets appropriately sized/compressed?
-- [ ] **Security:** Are inputs from users or external APIs properly sanitized before rendering or processing?
+**Crucially, testing must occur exclusively in the `tests/` directory.**
 
-</details>
+1.  **Unit Tests:** Have new/updated logic been covered by corresponding Vitest/Playwright unit tests? (Target: 100% Branch Coverage).
+2.  **E2E Validation:** If this touches user interaction, have Playwright scenarios been updated/created in `tests/e2e/`?
+3.  **Local Run:** Can you confirm zero console errors locally? (`npm run lint` and `npm run test` pass clean).
 
----
+## 🚀 Related Artifacts
 
-## 🧪 Testing Verification
-
-**Mandate:** All new logic paths *must* be covered by tests. Performance gains must be demonstrated.
-
-<details>
-<summary>🔬 **TESTING EVIDENCE**</summary>
-
-- [ ] **Unit Tests (Vitest):** Have I added/updated unit tests for all new functions/classes? (Coverage increase verified).
-- [ ] **E2E Tests (Playwright):** If this affects user workflow significantly, have I updated/added Playwright scenarios to validate flow?
-- [ ] **Test Command Output:** Does `npm run test:unit` and `npm run test:e2e` execute successfully?
-
-</details>
+*   Fixes: #... (If applicable)
+*   Closes: #... (If applicable)
+*   Documentation changes required (Y/N): (Update README/AGENTS.md if applicable)
 
 ---
 
-## 🖼️ Visual/Behavioral Evidence (If UI/UX Related)
+**AUTHOR SIGNATURE (Self-Review Checkoff)**
 
-If this PR modifies the user interface or extension behavior, please include visual proof.
-
-<!-- Attach GIFs, screenshots, or clear descriptive steps to reproduce the visual change. -->
-
-
-## 🧠 Reviewer Notes
-
-What specific areas should the reviewer focus on? (e.g., performance implications in the segment parsing algorithm, potential race conditions in content script injection).
-
+- [ ] I have run `npm run format` (Biome) locally.
+- [ ] I have reviewed the changes against the [AGENTS.md] directives.
+- [ ] The code is self-documenting (Comments explain 'Why', not 'What').
+- [ ] All URLs and paths reference the correct new repository name: `SponsorBlock-CrowdSource-Media-Segment-Filter-Browser-Extension`.

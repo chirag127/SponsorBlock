@@ -1,65 +1,64 @@
-# Security Policy
+# Security Policy for SponsorBlock-Crowdsourced-Content-Filter-Browser-Extension
 
-## Reporting Security Vulnerabilities
+This repository adheres to the **Apex Technical Authority** mandate for Zero-Defect, Future-Proof software engineering, integrating proactive security measures throughout the development lifecycle.
 
-We take security vulnerabilities seriously. If you discover a security vulnerability in our project, please report it to us immediately.
+## 1. Reporting a Vulnerability
 
-**Do not report vulnerabilities publicly** until we have had a chance to address them.
+We value security researchers and developers who report vulnerabilities responsibly. We treat all security reports with the highest priority.
 
-### Reporting Process
+If you discover a security vulnerability in this project, please follow these steps:
 
-1.  **Email:** Send an email to [Your Email Address or Security Contact] with the details of the vulnerability.  Please include:
-    *   A clear description of the vulnerability.
-    *   Steps to reproduce the vulnerability.
-    *   Impact of the vulnerability.
-    *   Any suggested remediation.
-2.  **Acknowledgement:** We will acknowledge your email within 48 hours.
-3.  **Investigation:** We will investigate the vulnerability and work to confirm and address it.
-4.  **Resolution:** We will work to fix the vulnerability and release a patch or update as quickly as possible.
-5.  **Disclosure:** After the vulnerability is fixed, we will publicly disclose the vulnerability and credit the reporter, if they wish.
+1.  **Do Not** create a public issue immediately.
+2.  Email the primary maintainer team at `security@sponsorblock.example.com` (Placeholder: *In a real project, this would be a dedicated security contact email*).
+3.  Provide a detailed description of the vulnerability, including:
+    *   The component or file affected.
+    *   The steps required to reproduce the vulnerability (Proof of Concept).
+    *   The potential impact.
 
-### Vulnerability Types
+We aim to acknowledge receipt of all security reports within **48 hours** and will provide regular updates on remediation progress.
 
-We are interested in reports of security vulnerabilities, including:
+## 2. Remediation Timeline
 
-*   Cross-Site Scripting (XSS)
-*   SQL Injection
-*   Authentication and Authorization issues
-*   Remote Code Execution (RCE)
-*   Information Disclosure
-*   Denial of Service (DoS)
-*   Supply Chain Attacks
+We commit to the following timelines for triaging and patching confirmed vulnerabilities:
 
-### Security Best Practices
+| Severity | Triage Target | Patch Target | Disclosure | 
+| :--- | :--- | :--- | :--- |
+| **Critical** | 24 Hours | 7 Days | Coordinated, post-patch | 
+| **High** | 48 Hours | 14 Days | Coordinated, post-patch | 
+| **Medium/Low** | 5 Days | 30 Days | Standard Public Disclosure | 
 
-We follow security best practices to protect our users and systems, including:
+## 3. Security Practices & Tooling
 
-*   **Input Validation:**  All user inputs are validated and sanitized to prevent injection attacks.
-*   **Authentication and Authorization:**  Robust authentication and authorization mechanisms are used to protect sensitive data.
-*   **Data Encryption:**  Sensitive data is encrypted at rest and in transit.
-*   **Regular Security Audits:**  We conduct regular security audits and penetration testing to identify and address vulnerabilities.
-*   **Dependency Management:**  We regularly update dependencies to address security vulnerabilities.
-*   **Secure Coding Practices:**  We adhere to secure coding practices to prevent common vulnerabilities.
-*   **SBOM (Software Bill of Materials):**  An SBOM is generated for all builds to track dependencies.
+As a high-integrity project built on TypeScript and Vite (Scenario A Apex Stack), we enforce strict security controls:
 
-### Security Tools and Practices
+### 3.1. Dependency Auditing (DevSecOps Protocol)
 
-*   **Static Analysis:** Use of Biome for TypeScript, to identify potential vulnerabilities in code.
-*   **Dependency Scanning:** Regular scanning of project dependencies for known vulnerabilities.
-*   **Code Reviews:**  All code changes are reviewed by other developers to identify potential security issues.
+All dependencies are regularly scanned for known CVEs using automated tooling integrated into our CI/CD pipeline (`.github/workflows/ci.yml`).
 
-### Responsible Disclosure
+*   **Automated Scanning:** We utilize tools like `npm audit` (or equivalent dependency scanners) during pre-commit/pre-merge checks.
+*   **SBOM Generation:** A Software Bill of Materials (SBOM) is generated during the release process to maintain supply chain transparency.
 
-We appreciate responsible disclosure of security vulnerabilities. We will work with you to address vulnerabilities and credit your contribution.
+### 3.2. Code Integrity & Input Sanitization
 
-### Policy Updates
+We adhere strictly to the **Zero Trust** principle:
 
-This security policy is subject to change. Any updates will be announced on this repository.
+*   **Data Validation:** All data sourced from the crowdsourced database or user input *must* be treated as untrusted and rigorously sanitized before rendering or processing, mitigating XSS risks common in client-side extensions.
+*   **API Communication:** All network requests utilize HTTPS, and connection integrity is verified (HSTS/Certificate Pinning where applicable for sensitive endpoints).
+*   **Browser Extension Security:** Sensitive data (like configuration flags) is not stored in plain text `localStorage`. We leverage secure alternatives like `chrome.storage.local` with encryption wrappers for sensitive metadata.
 
-## Contact
+### 3.3. Secrets Management
 
-If you have any questions or concerns, please contact us at [Your Email Address or Security Contact].
+No secrets, API keys, or tokens are ever committed directly into the source code.
 
----
+*   All necessary secrets for CI/CD execution (e.g., signing keys) are managed exclusively via **GitHub Secrets** and accessed only within the secure runner environment.
 
-_Last updated: December 2025_
+## 4. Responsible Disclosure & Coordination
+
+Upon confirmation of a vulnerability, the remediation process is coordinated as follows:
+
+1.  **Patch Development:** A private branch is created to apply the fix.
+2.  **Internal Review:** The fix undergoes rigorous unit (`Vitest`) and integration (`Playwright`) testing.
+3.  **Coordinated Release:** Once the patch is confirmed stable, the fix is merged, and a new version is released simultaneously across all supported platforms.
+4.  **Public Communication:** A brief advisory detailing the vulnerability category (without exploitation details) is posted after the release, adhering to the timeline above.
+
+This disciplined approach ensures end-users are protected with minimal exposure time to known threats.

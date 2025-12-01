@@ -1,56 +1,33 @@
 ---
 name: Bug Report
-about: Create a report to help us improve
-title: '[BUG] - Short Description of the Bug'
-labels: bug
-assignees: ''
+about: Report a bug or issue with SponsorBlock
+title: "Bug: "
+labels: "bug"
+assignees: ""
 
---- 
-
-Thanks for taking the time to file a bug report! Before you proceed, please ensure:
-
-*   You are on the latest version of the SponsorBlock client.
-*   You have searched the existing issues to avoid duplicates.
+}
 
 **Describe the bug**
 A clear and concise description of what the bug is.
 
 **To Reproduce**
 Steps to reproduce the behavior:
-1.  Go to '...' (e.g., a specific video URL)
-2.  Click on '....'
-3.  Scroll down to '....'
-4.  See error
+1. Go to '...'
+2. Click on '....'
+3. Scroll down on '....'
+4. See error
 
-**Expected behavior**
+**Expected Behavior**
 A clear and concise description of what you expected to happen.
 
 **Screenshots**
-If applicable, add screenshots to help explain your problem.
+If applicable, add screenshots to help explain your problem. You can drag images into the file or paste them.
 
-**Desktop (please complete the following information):**
- - OS: [e.g. iOS, Windows, Linux]
- - Browser: [e.g. Chrome, Firefox, Safari]
- - Version: [e.g. 22]
+**Browser Environment (Please complete the following information)**
+* Browser: [e.g., Chrome, Firefox, Safari, Edge]
+* Browser Version: [e.g., 117.0.5938.132]
+* Operating System: [e.g., Windows 11, macOS Sonoma 14.0, Ubuntu 22.04]
+* Extension Version: [e.g., find this in the extension's settings or `chrome://extensions`]
 
-**Smartphone (please complete the following information):**
- - OS: [e.g. iOS, Android]
- - Browser: [e.g. stock browser, Chrome, Firefox]
- - Version: [e.g. 22]
-
-**Additional context**
-Add any other context about the problem here.
-
-**Logs**
-Please provide relevant logs. These can often be found in the browser's developer console.
-
-
-**Troubleshooting Checklist**
-
-*   [ ] I have updated to the latest version.
-*   [ ] I have checked the console for errors.
-*   [ ] I have disabled other extensions to rule out conflicts.
-*   [ ] I have searched for similar issues.
-
-**Urgency**
-How critical is this bug? (e.g., 'Blocks core functionality', 'Minor UI issue')
+**Additional Context**
+Add any other context about the problem here. For example, specific video URLs where the bug occurs, or related user scripts.

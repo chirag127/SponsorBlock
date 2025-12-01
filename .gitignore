@@ -1,49 +1,32 @@
-# Ignore all files in the node_modules directory
+# Dependency Artifacts
 node_modules/
-
-# Ignore build output directories
-dist/
-build/
-
-# Ignore environment variables file (never commit secrets)
-.env
-.env.*
-!.env.example
-
-# Ignore OS-specific files
-.DS_Store
-Thumbs.db
-
-# Ignore IDE/editor configuration files
-.vscode/
-.idea/
-*.sublime-workspace
-*.sublime-project
-
-# Ignore log files
-*.log
 npm-debug.log*
-yarn-debug.log*
 yarn-error.log*
-pnpm-debug.log*
 
-# Ignore testing artifacts
-coverage/
-*.test.*
+# Build and Output Directories
+/dist
+/build
+.vite-cache/
 
-# Ignore temporary files
-*.tmp
+# TypeScript Artifacts
+*.tsbuildinfo
 
-# Ignore package manager cache directories
-.npm/
-.yarn/
-.pnpm-cache/
+# Vite Specific
+.cache/
 
-# Ignore Tauri specific files if applicable
-src-tauri/target/
+# Testing and Coverage
+/coverage
+.nyc_output/
+playwright-report/
+*.log
 
-# Ignore Vite specific files if applicable
-.vite/
+# OS & Editor Specific
+.DS_Store
+.idea/
+.vscode/
+*.swp
 
-# Ignore WXT specific files if applicable
-.wxt/
+# Environment Variables (Security)
+.env
+.env.local
+.env.*.local

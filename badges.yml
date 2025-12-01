@@ -1,0 +1,69 @@
+# Badges Configuration for SponsorBlock-CrowdSource-Media-Segment-Filter-Browser-Extension
+# This file defines the metadata and properties for all badges used in the project's README.
+# It allows for programmatic generation and consistent styling across documentation.
+
+- name: CI Build Status
+  type: github-action
+  workflow: ci.yml
+  repo: chirag127/SponsorBlock-CrowdSource-Media-Segment-Filter-Browser-Extension
+  branch: main
+  style: flat-square
+  link: https://github.com/chirag127/SponsorBlock-CrowdSource-Media-Segment-Filter-Browser-Extension/actions/workflows/ci.yml
+
+- name: Code Coverage
+  type: codecov
+  repo: chirag127/SponsorBlock-CrowdSource-Media-Segment-Filter-Browser-Extension
+  branch: main
+  style: flat-square
+  link: https://codecov.io/gh/chirag127/SponsorBlock-CrowdSource-Media-Segment-Filter-Browser-Extension/branch/main
+
+- name: Language: TypeScript
+  type: custom
+  label: Language
+  message: TypeScript
+  color: 3178C6
+  logo: typescript
+  style: flat-square
+  link: https://www.typescriptlang.org/
+
+- name: Extension Framework: WXT
+  type: custom
+  label: Extension Framework
+  message: WXT
+  color: 2C7DF7 # WXT Brand Color
+  # logo: wxt # Logo not consistently available via Shields.io, omitting for reliability
+  style: flat-square
+  link: https://wxt.dev/
+
+- name: Build Tool: Vite
+  type: custom
+  label: Build Tool
+  message: Vite
+  color: 646CFF # Vite Brand Color
+  logo: vite
+  style: flat-square
+  link: https://vitejs.dev/
+
+- name: Linter/Formatter: Biome
+  type: custom
+  label: Linter/Formatter
+  message: Biome
+  color: 000000 # Biome Brand Color
+  logo: biome
+  style: flat-square
+  link: https://biomejs.dev/
+
+- name: License: CC BY-NC 4.0
+  type: custom
+  label: License
+  message: CC BY-NC 4.0
+  color: lightgrey
+  style: flat-square
+  link: https://creativecommons.org/licenses/by-nc/4.0/
+
+- name: GitHub Stars
+  type: github-stars
+  repo: chirag127/SponsorBlock-CrowdSource-Media-Segment-Filter-Browser-Extension
+  style: flat-square
+  cache_seconds: 86400 # Cache for 24 hours to reduce API calls
+  link: https://github.com/chirag127/SponsorBlock-CrowdSource-Media-Segment-Filter-Browser-Extension/stargazers

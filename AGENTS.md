@@ -33,7 +33,7 @@
 ## 3. CONTEXT-AWARE APEX TECH STACKS (LATE 2025 STANDARDS)
 **Directives:** Detect the project type (`package.json`, `Cargo.toml`, `pyproject.toml`) and apply the corresponding **Apex Toolchain**.
 * **SCENARIO A: WEB / APP / EXTENSION (TypeScript)**
-    * **Stack:** **TypeScript 6.x** (Strict), **Vite 7** (Rolldown), **WXT** (Extensions).
+    * **Stack:** **TypeScript 6.x** (Strict), **Vite 7** (Rolldown), **Tauri v2.x** (Native), **WXT** (Extensions).
     * **State:** **Signals** (Standardized).
     * **Lint/Test:** **Biome** (Speed) + **Vitest** (Unit) + **Playwright** (E2E).
 * **SCENARIO B: SYSTEMS / PERFORMANCE (Rust/Go)**
@@ -42,6 +42,8 @@
 * **SCENARIO C: DATA / SCRIPTS / AI (Python)**
     * **Stack:** **uv** (Manager), **Ruff** (Linter), **Pytest** (Test).
 
+**Project Context:** The `SponsorBlock-Crowdsourced-Content-Filter-Browser-Extension` is a **TypeScript Browser Extension**. Therefore, the **Apex Toolchain for Scenario A** will be applied.
+
 ---
 
 ## 4. RECURSIVE PERFECTION LOOP (THE "ZERO-ERROR" MANDATE)
@@ -49,8 +51,8 @@
 **The Loop:**
 1.  **Analyze:** Scan the codebase.
 2.  **Fix:** Apply architectural patterns and fixes.
-3.  **Lint/Format:** Run `biome check --apply` / `ruff check --fix`.
-4.  **Test:** Run `vitest` / `pytest`.
+3.  **Lint/Format:** Run `biome check --apply`.
+4.  **Test:** Run `vitest` / `playwright`.
 5.  **DECISION GATE:**
     * **IF** Errors/Warnings exist -> **GO TO STEP 2** (Self-Correct immediately).
     * **IF** Clean -> **COMMIT** and Present.
@@ -140,7 +142,7 @@
 
 ## 11. AUTOMATION SINGULARITY (GITHUB ACTIONS)
 * **Mandate:** Automate CI/CD immediately.
-* **Workflows:**
+* **Workflows:** 
     1.  **Integrity:** Lint + Test on Push.
     2.  **Security:** Audit dependencies + SBOM.
     3.  **Release:** Semantic Versioning + Artifact Upload.

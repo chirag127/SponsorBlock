@@ -6,7 +6,7 @@
 **Output Standard:** Deliver **EXECUTION-ONLY** results. No plans, no "reporting"—only executed code, updated docs, and applied fixes.
 **Philosophy:** "Zero-Defect, High-Velocity, Future-Proof."
 
----
+--- 
 
 ## 2. INPUT PROCESSING & COGNITION
 * **SPEECH-TO-TEXT INTERPRETATION PROTOCOL:**
@@ -19,7 +19,7 @@
     * **Validation:** Use `docfork` to verify *every* external API signature.
     * **Reasoning:** Engage `clear-thought-two` to architect complex flows *before* writing code.
 
----
+--- 
 
 ## 3. CONTEXT-AWARE APEX TECH STACKS (LATE 2025 STANDARDS)
 **Directives:** Detect the project type (`package.json`, `Cargo.toml`, `pyproject.toml`) and apply the corresponding **Apex Toolchain**.
@@ -35,19 +35,6 @@
 
 --- 
 
-**Project Specific Stack (SponsorBlock-Crowdsourced-Media-Segment-Filter-Extension):**
-*   **Type:** Browser Extension.
-*   **Language:** TypeScript.
-*   **Apex Toolchain Applied:** Scenario A.
-*   **Framework/Build:** **WXT (Web Extension Tooling)** is the standard for modern browser extensions, integrating seamlessly with Vite for build optimization. We will leverage **Vite 7**.
-*   **Language Features:** **TypeScript 6.x** with strict mode enabled.
-*   **State Management:** **Signals** provide efficient, reactive state updates.
-*   **Linting & Formatting:** **Biome** ensures code quality and consistency at extreme speed.
-*   **Testing:** **Vitest** for unit tests and **Playwright** for end-to-end (E2E) testing.
-*   **Native Integration (If applicable):** **Tauri v2.x** would be considered if the extension required desktop-level integration, but for a browser extension, WXT is primary.
-
----
-
 ## 4. AI ORCHESTRATION & GEMINI PROTOCOL (DECEMBER 2025)
 **Mandate:** If integrating AI, strictly follow this **Fallback Cascade**.
 * **Tier 1 (Intelligence):** `gemini-3-pro` (Stable Dec 2025) - Multimodal Reasoning.
@@ -56,7 +43,7 @@
 * **Tier 4 (Speed):** `gemini-2.5-flash-lite` - Cost-efficiency.
 * **Circuit Breaker:** If a model fails (429/500), trigger **Cool-Off** and fallback immediately.
 
----
+--- 
 
 ## 5. RECURSIVE PERFECTION LOOP (THE "ZERO-ERROR" MANDATE)
 **The Loop:**
@@ -69,7 +56,7 @@
     * **IF** Clean -> **COMMIT** and Present.
 **Constraint:** **DO NOT STOP** until the build is perfectly clean.
 
----
+--- 
 
 ## 6. CORE ARCHITECTURAL PRINCIPLES
 * **SOLID MANDATE:** SRP, OCP, LSP, ISP, DIP.
@@ -81,7 +68,7 @@
 * **CQS:** Methods must be **Commands** or **Queries**, never both.
 * **12-Factor App:** Config in environment; backing services attached.
 
----
+--- 
 
 ## 7. CODE HYGIENE & STANDARDS (READABILITY FIRST)
 * **SEMANTIC NAMING PROTOCOL:**
@@ -93,7 +80,7 @@
     * **DRY & KISS:** Automate repetitive tasks. Keep logic simple.
     * **Zero Comments:** Code must be **Self-Documenting**. Use comments *only* for "Why".
 
----
+--- 
 
 ## 8. RELIABILITY, SECURITY & SUSTAINABILITY
 * **DEVSECOPS PROTOCOL:**
@@ -109,26 +96,25 @@
     * **Efficiency:** Optimize loops ($O(n)$ over $O(n^2)$).
     * **Lazy Loading:** Load resources only when needed.
 
----
+--- 
 
 ## 9. COMPREHENSIVE TESTING & VERIFICATION STRATEGY
+**Project Stack:** TypeScript, Vite, WXT (Browser Extension).
 * **FOLDER SEPARATION PROTOCOL (STRICT):**
-    * **Production Purity:** The `src/` or `extension/` folder is a **Production-Only Zone**. It must contain **ZERO** test files and **ZERO** test scripts.
-    * **Total Containment:** **ALL** verification scripts, validation runners, static analysis tools, and test specs must reside exclusively in `tests/`.
-    * **Structure:**
-        * `tests/unit/`: Unit tests.
-        * `tests/e2e/`: Playwright/Selenium tests.
-        * `tests/scripts/`: Verification/Validation scripts (e.g., `verify-imports.js`, `audit-coverage.js`).
+    * **`src/` Directory:** Contains ONLY production code. No test files or test scripts.
+    * **`tests/` Directory:** Contains ALL verification code.
+        * `tests/unit/`: Vitest unit tests.
+        * `tests/e2e/`: Playwright end-to-end tests.
+        * `tests/scripts/`: Custom verification scripts (e.g., `audit-deps.js`).
 * **TESTING PYRAMID (F.I.R.S.T.):**
-    * **Fast:** Tests run in milliseconds.
-    * **Isolated:** No external dependencies.
-    * **Repeatable:** Deterministic results.
+    * **Fast:** Vitest unit tests execute rapidly.
+    * **Isolated:** Each test runs independently.
+    * **Repeatable:** Consistent results across environments.
 * **COVERAGE MANDATE:**
-    * **1:1 Mapping:** Every source file **MUST** have a corresponding test file.
     * **Target:** 100% Branch Coverage.
-    * **Zero-Error Standard:** Software must run with 0 console errors.
+    * **Zero-Error Standard:** Application must run with 0 console errors.
 
----
+--- 
 
 ## 10. UI/UX AESTHETIC SINGULARITY (2026 STANDARD)
 * **VISUAL LANGUAGE:**
@@ -143,7 +129,7 @@
 * **HYPER-CONFIGURABILITY:**
     * **Mandate:** Every feature/color must be user-configurable via Settings.
 
----
+--- 
 
 ## 11. DOCUMENTATION & VERSION CONTROL
 * **HERO-TIER README (SOCIAL PROOF):**
@@ -157,17 +143,17 @@
     * **Conventional Commits:** Strict format (`feat:`, `fix:`, `docs:`).
     * **Semantic Versioning:** Enforce `Major.Minor.Patch`.
 
----
+--- 
 
 ## 12. AUTOMATION SINGULARITY (GITHUB ACTIONS)
-**Mandate:** Automate CI/CD immediately.
+* **Mandate:** Automate CI/CD immediately.
 * **Workflows:**
     1.  **Integrity:** Lint + Test on Push.
     2.  **Security:** Audit dependencies + SBOM.
     3.  **Release:** Semantic Versioning + Artifact Upload.
     4.  **Deps:** Auto-merge non-breaking updates.
 
----
+--- 
 
 ## 13. THE ATOMIC EXECUTION CYCLE
 **You must follow this loop for EVERY logical step:**

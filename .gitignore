@@ -1,32 +1,39 @@
-# Dependency Artifacts
+# Dependency Directories
 node_modules/
-npm-debug.log*
-yarn-error.log*
 
-# Build and Output Directories
-/dist
-/build
-.vite-cache/
+# Build Output Artifacts (Vite/Parcel/Webpack based)
+dist/
+build/
+.parcel-cache/
+.turbo/
 
-# TypeScript Artifacts
+# TypeScript & Compilation Artifacts
 *.tsbuildinfo
 
-# Vite Specific
-.cache/
+# IDE/Editor Files
+.vscode/
+.idea/
+*.sublime-project
+*.sublime-workspace
+
+# Operating System Artifacts
+.DS_Store
+Thumbs.db
 
 # Testing and Coverage
-/coverage
+coverage/
 .nyc_output/
-playwright-report/
-*.log
+.pnp*
 
-# OS & Editor Specific
-.DS_Store
-.idea/
-.vscode/
-*.swp
+# Browser Extension Specific Caches (for development)
+.webext/
 
-# Environment Variables (Security)
+# Logs and Temporary Files
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Secrets and Environment Files (Never commit sensitive data)
 .env
 .env.local
-.env.*.local
+secrets.json
